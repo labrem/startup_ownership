@@ -1,5 +1,4 @@
 # startup_ownership
-Startup founding team ownership by stage
 
 Median valuation data was sourced from deep research in both Gemini and Perplexity, below.
 
