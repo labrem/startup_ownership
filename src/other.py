@@ -7,6 +7,9 @@ def plot_simulation(stages, stats, title):
     # 1. Data Setup
     stages = stages.copy()
     data = stats.copy()
+    stages.reverse()
+    for key in data:
+        data[key].reverse()
 
     # 2. Plot Creation
     fig, ax = plt.subplots(figsize=(9.5, 6))
