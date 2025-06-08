@@ -4,17 +4,14 @@ import matplotlib.pyplot as plt
 
 def plot_simulation(stages, stats, title):
 
-    # 1. Data Setup
-    stages = stages.copy()
-    data = stats.copy()
-    stages.reverse()
-    for key in data:
-        data[key].reverse()
+    # --- 1. Data Setup ---
+    stages = stages
+    data = stats
 
-    # 2. Plot Creation
+    # --- 2. Plot Creation ---
     fig, ax = plt.subplots(figsize=(9.5, 6))
 
-    # Define colors and styles (re-added mean_color)
+    # Define colors and styles
     line_color = '#ff6f3c'
     mean_color = '#007acc'
     text_color = '#333333'
@@ -36,25 +33,30 @@ def plot_simulation(stages, stats, title):
         
         points_x = [p10, p25, p50, p75, p90]
         ax.scatter(points_x, [i]*len(points_x), color=line_color, s=50, zorder=3)
+        
         ax.scatter(mean, i, color=mean_color, s=120, zorder=4, edgecolors='white')
-
-        ax.text(mean, i - 0.15, "Mean", ha='center', va='top', fontsize=7, color=text_color)
+        
+        ax.text(mean, i + 0.15, "Mean", ha='center', va='top', fontsize=7, color=text_color)
 
         value_labels = [f"{val:.1f}" for val in points_x]
         quantile_labels = ['10th', '25th', '50th', '75th', '90th']
 
         for j, x_pos in enumerate(points_x):
-            ax.text(x_pos, i + 0.18, value_labels[j], ha='center', va='bottom', fontsize=8, color=text_color, fontweight='bold')
-            ax.text(x_pos, i + 0.45, quantile_labels[j], ha='center', va='bottom', fontsize=7, color=text_color)
+            ax.text(x_pos, i - 0.18, value_labels[j], ha='center', va='bottom', fontsize=8, color=text_color, fontweight='bold')
+            ax.text(x_pos, i - 0.45, quantile_labels[j], ha='center', va='bottom', fontsize=7, color=text_color)
 
-    # 3. Table and Text Formatting
+
+    # --- 3. Table and Text Formatting ---
     for i, stage in enumerate(stages):
-        ax.text(2.5, i, stage, ha='right', va='center', fontsize=10, fontweight='bold')
+        ax.text(2.5, i, stage, ha='right', va='center', fontsize=11, fontweight='bold')
 
-    # 4. Styling and Final Touches
+    # --- 4. Styling and Final Touches ---
     ax.set_xscale('log')
     ax.set_xlim(2, 300)
     ax.set_ylim(-1, len(stages))
+
+    # This line inverts the y-axis, causing the change in label behavior
+    ax.invert_yaxis()
 
     # Hide all axes and spines
     ax.spines['bottom'].set_visible(False)
@@ -69,7 +71,7 @@ def plot_simulation(stages, stats, title):
     ax.set_axisbelow(True)
 
     # Adjust title position
-    ax.set_title('Founding Team Ownership Benchmarks (Log Scale)', loc='left', fontsize=14, fontweight='bold', pad=0)
+    ax.set_title(title, loc='left', fontsize=14, fontweight='bold', pad=0)
 
     plt.tight_layout(rect=[0.05, 0.05, 0.95, 0.93])
 
