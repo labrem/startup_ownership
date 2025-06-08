@@ -35,6 +35,8 @@ def plot_simulation(stages, stats, title):
         ax.scatter(points_x, [i]*len(points_x), color=line_color, s=50, zorder=3)
         ax.scatter(mean, i, color=mean_color, s=120, zorder=4, edgecolors='white')
 
+        ax.text(mean, i - 0.15, "Mean", ha='center', va='top', fontsize=7, color=text_color)
+
         value_labels = [f"{val:.1f}" for val in points_x]
         quantile_labels = ['10th', '25th', '50th', '75th', '90th']
 
