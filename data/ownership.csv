@@ -1,0 +1,26 @@
+stage,quantile,ownership
+Seed,0.1,0.248
+Seed,0.25,0.43
+Seed,0.5,0.562
+Seed,0.75,0.667
+Seed,0.9,0.75
+Series A,0.1,0.103
+Series A,0.25,0.233
+Series A,0.5,0.361
+Series A,0.75,0.482
+Series A,0.9,0.596
+Series B,0.1,0.045
+Series B,0.25,0.123
+Series B,0.5,0.23
+Series B,0.75,0.327
+Series B,0.9,0.428
+Series C,0.1,0.027
+Series C,0.25,0.086
+Series C,0.5,0.157
+Series C,0.75,0.24
+Series C,0.9,0.335
+Series D+,0.1,0.021
+Series D+,0.25,0.059
+Series D+,0.5,0.114
+Series D+,0.75,0.196
+Series D+,0.9,0.266

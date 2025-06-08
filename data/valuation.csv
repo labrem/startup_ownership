@@ -1,0 +1,22 @@
+stage,source,valuation
+Seed,Gemini: Carta (Q1 2025),16.0
+Seed,Gemini: PitchBook-NVCA (Q4 2024),14.0
+Seed,Gemini: Gunderson Dettmer (2024),20.0
+Seed,Gemini: WinSavvy (2024 data),13.0
+Seed,Perplexity: Carta Q1 2025,16.0
+Seed,Perplexity: Carta Q4 2024,16.0
+Seed,Perplexity: AngelList 2024,20.0
+Seed,Perplexity: Carta Q1 2024,14.8
+Seed,Perplexity: PitchBook-NVCA 2024,13.0
+Series A,Gemini: Cooley GO (Q1 2025),52.0
+Series A,Gemini: Carta (Q1 2025),48.0
+Series A,Gemini: PitchBook-NVCA (Q4 2024),40.0
+Series A,Gemini: Gunderson Dettmer (2024),40.0
+Series B,Gemini: Carta (Q1 2025),100.7
+Series B,Gemini: PitchBook-NVCA (Q4 2024),105.0
+Series B,Gemini: Gunderson Dettmer (2024),124.0
+Series C,Gemini: Cooley GO (Q1 2025),164.0
+Series C,Gemini: Carta (Q1 2024),195.0
+Series C,Gemini: PitchBook-NVCA (Q4 2024),248.0
+Series D+,Gemini: Cooley GO (Q1 2025),544.0
+Series D+,Gemini: PitchBook-NVCA (Q4 2024),754.0
